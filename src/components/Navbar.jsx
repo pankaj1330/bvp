@@ -1,4 +1,5 @@
 import logo from '../assets/logo.svg'
+import { CiMenuFries } from "react-icons/ci";
 import { useState } from 'react'
 
 export default function Navbar(){
@@ -40,7 +41,7 @@ export default function Navbar(){
 
 
                 <div className="toggle-btns">
-                    <button className='toggle-btn' onClick={toggleMobileMenu}>Toggle</button>
+                    <button className='toggle-btn' onClick={toggleMobileMenu}><CiMenuFries /></button>
                 </div>
 
                 {showmenu && 

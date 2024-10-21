@@ -408,6 +408,12 @@ footer{
 .navbar .mobile-menu,.navbar .toggle-btns{
   display: none;
 }
+.navbar .toggle-btns button{
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 0;
+}
 
 @media only screen and (max-width:900px){
   .newsletter .container {
