@@ -168,6 +168,7 @@ ul{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  row-gap: 20px;
   justify-content: space-between;
   align-items: center;
 }
@@ -203,6 +204,7 @@ ul{
 .funding .container {
   display: flex;
   flex-direction: row;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
   gap: 32px;
@@ -235,7 +237,7 @@ ul{
   color: #002e52;
 }
 .funding .right img{
-  max-height: 500px;
+  max-width: 600px;
   object-fit: cover;
   border-radius: 32px;
 }
@@ -291,8 +293,9 @@ ul{
   margin: 40px 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 16px;
-  justify-content: space-between;
+  justify-content: center;
 }
 .partners .update-cards .update-card{
   width: 300px;
@@ -349,8 +352,9 @@ ul{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
   /* flex-wrap: wrap; */
-  padding: 120px 0;
+  padding: 120px 4px;
   margin-top: 100px;
 }
 
@@ -398,3 +402,78 @@ footer{
   color: #002e52;
 }
 
+.nav-container{
+  position: relative;
+}
+.navbar .mobile-menu,.navbar .toggle-btns{
+  display: none;
+}
+
+@media only screen and (max-width:900px){
+  .newsletter .container {
+    flex-direction: column;
+    align-items: start;
+    justify-content: stretch;
+    gap: 16px;
+  }
+  .newsletter .container div{
+    width: 100%;
+  }
+  .newsletter .container form{
+    width: 100%;
+  }
+  .newsletter .container h1 br{
+    display: none;
+  }
+
+  .funding .container{
+    flex-direction: column;
+    align-items: start;
+  }
+  .funding .left p br{
+    display: none;
+  }
+  .navbar .nav-left .nav-links{
+    display: none;
+  }
+  .navbar .nav-right{
+    display: none;
+  }
+  .navbar .mobile-menu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #fdfbf4;
+    padding: 24px 4px;
+  }
+  .navbar .toggle-btns{
+    display: block;
+  }
+  .navbar .mobile-menu .nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width:820px){
+  .invest-tab .tab-right{
+      display: none;
+  }
+  .partners .container .cards .card {
+    width: 48%;
+  }
+}
+@media only screen and (max-width:620px){
+  .funding .right img {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width:520px){
+  .partners .container .cards .card {
+    width: 100%;
+  }
+}
